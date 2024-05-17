@@ -1,18 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 input[type=number]::-webkit-inner-spin-button /* Elimino le frecce su nell'input number. */
 {
     -webkit-appearance: none;
 }
+.sudoku
+{
+    display: flex;
+    justify-content: flex-end; /* Sposta la griglia a destra */
+    margin: 0;
+    align-items: center; /* Centra verticalmente la griglia */
+}
+.sudoku 
+{
+    margin-right: 50px; /* Spazio dal bordo destro della pagina */
+}
 .table
 {
-    align-items: flex-start;
-    float: right;
+    display: grid;
+    grid-template-columns: repeat(9, 40px); /* 9 colonne di 40px ciascuna */
+    gap: 1px; /* Spazio tra le celle */
 }
-.number
+.table input
 {
+    width: 40px;
+    height: 40px;
     text-align: center;
-    padding: 10px 0px;
-    font-size: 16px;
-    margin: 1px 1px;
+    font-size: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
     border-style: solid;
-    border-radius: 0px;
+}
+
+.sudoku input:nth-child(3n) 
+{
+    border-right: 3px solid #000;
+}
+
+/* Rimozione del bordo destro più spesso dall'ultima colonna */
+.sudoku input:nth-child(9n)
+{
+    border-right: 1px solid #000;
+}
+
+.sudoku input:nth-child(n+19):nth-child(-n+27),
+.sudoku input:nth-child(n+46):nth-child(-n+54)
+{
+    border-bottom: 3px solid #000;
+}
+
+.cell
+{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+.nunito-font
+{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
 }

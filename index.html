@@ -8,15 +8,17 @@
     <title>Sudoku</title>
 </head>
 <body>
-    <h1>Benvenuti nel Sudoku1</h1>
+    <h1 class="nunito-font">Benvenuti nel Sudoku!</h1>
     <br>
     <div id="buttons">
-        <button id="generate" class="button"><b>Generate</b> Sudoku</button>
+        <button id="generate" class="button" class="nunito-font" onclick="sudoku.genSudoku()"><b>Generate</b> Sudoku</button>
         <br>
-        <button id="check"class="button"><b>Check</b>Sudoku</button>
+        <button id="check"class="button" class="nunito-font"><b>Check</b> Sudoku</button>
     </div>
-    <div id="table">
-        <input type="number" maxlength="1"  min="1" max="9" class="number" required>
+    <div class="sudoku">
+        <div class="table">
+
+        </div>
     </div>
 </body>
 </html>
